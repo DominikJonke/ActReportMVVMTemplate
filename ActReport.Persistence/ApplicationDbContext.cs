@@ -7,11 +7,11 @@ using System.Diagnostics;
 
 namespace ActReport.Persistence
 {
-  public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Core.Entities.Activity> Activities { get; set; }
-       
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder()
@@ -30,6 +30,5 @@ namespace ActReport.Persistence
 
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ActReport.ConsoleFillDb", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActReport.ViewModel", "ActReport.ViewModel\ActReport.ViewModel.csproj", "{2DE2CBAF-B395-4C8C-8280-99244B3607DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActReport.UI", "ActReport.UI\ActReport.UI.csproj", "{2736E0A9-A419-457C-AB45-6D39508D1F2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2DE2CBAF-B395-4C8C-8280-99244B3607DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE2CBAF-B395-4C8C-8280-99244B3607DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE2CBAF-B395-4C8C-8280-99244B3607DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2736E0A9-A419-457C-AB45-6D39508D1F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2736E0A9-A419-457C-AB45-6D39508D1F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2736E0A9-A419-457C-AB45-6D39508D1F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2736E0A9-A419-457C-AB45-6D39508D1F2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
