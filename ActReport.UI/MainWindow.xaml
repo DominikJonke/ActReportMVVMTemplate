@@ -10,18 +10,25 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
         
-        <Button Height="30" Command="{Binding CmdSaveChanges}">Änderung speichern</Button>
+        <UniformGrid Grid.Row="0" Columns="2">
+            <TextBlock>Mitarbeitersuche:</TextBlock>
+            <TextBox Width="250" Text="{Binding FilterEmployee, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+        </UniformGrid>
         
-        <UniformGrid Grid.Row="1" Rows="2" Columns="2">
+        <Button Grid.Row="1" Height="30" Command="{Binding CmdSaveChanges}">Änderung speichern</Button>
+        
+        <UniformGrid Grid.Row="2" Rows="2" Columns="2">
             <TextBlock>Vorname:</TextBlock>
             <TextBox Text="{Binding FirstName}"></TextBox>
             <TextBlock>Nachname:</TextBlock>
-            <TextBox Text="{Binding LastName}"></TextBox>
+            <TextBox Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
         </UniformGrid>
-        <ListView SelectedItem="{Binding SelectedEmployee}" Grid.Row="2" ItemsSource="{Binding Employees}">
+        <ListView SelectedItem="{Binding SelectedEmployee}" Grid.Row="3" ItemsSource="{Binding Employees}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="120" Header="Vorname" DisplayMemberBinding="{Binding FirstName}"></GridViewColumn>
@@ -29,5 +36,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <Button Grid.Row="4" Height="30" Command="{Binding CmdNewEmployee}">Neuer Mitarbeiter</Button>
+        
     </Grid>
 </Window>
